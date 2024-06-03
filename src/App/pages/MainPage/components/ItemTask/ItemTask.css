@@ -1,0 +1,122 @@
+.list__item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.item__id{
+    background: #747bff;
+    width: 25px;
+    flex-shrink: 0;
+}
+
+.item__name, .item__email {
+    border-right: #747bff dotted 1px;
+    width: 100%;
+    max-width: 150px;
+    padding-right: 5px;
+    flex-shrink: 0;
+}
+.text{
+    border-right: #747bff dotted 1px;
+    width: 100%;
+    min-width: 350px;
+
+}
+
+.text.disabled{
+    display: none;
+}
+.status{
+    width: 100%;
+    min-width: 150px;
+
+}
+.status.disabled{
+    display: none;
+}
+
+.edit-text{
+    display: none;
+    resize: none;
+    width: 100%;
+    min-width: 350px;
+}
+.edit-text.edit{
+    display: block;
+}
+
+.edit-status{
+    display: none;
+    width: 100%;
+    min-width: 150px;
+}
+.edit-status.edit{
+    display: block;
+}
+
+.btn-edit{
+    display: none;
+}
+.btn-edit.active{
+    display: block;
+}
+.btn-edit.disabled{
+    display: none;
+}
+.btn-save{
+    display: none;
+}
+.btn-save.active{
+    display: block;
+}
+@media (max-width: 1100px) {
+    .list__item{
+
+        display: grid;
+
+        grid-template-areas:
+        "number name email"
+        "text text text"
+        "status status status"
+        "btn btn btn"
+    ;
+    }
+    .status{
+        grid-area: status;
+        border-bottom: #747bff dotted 1px;
+    }
+    .text{
+        grid-area: text;
+        border-bottom: #747bff dotted 1px;
+        border-right: none;
+    }
+    .item__name{
+        grid-area: name;
+        border: none;
+    }
+    .item__email{
+        grid-area: email;
+        border: none;
+    }
+    .item__id{
+        grid-area: number;
+    }
+    .btn-edit{
+        grid-area: btn;
+    }
+    .btn-save{
+        grid-area: btn;
+    }
+    .edit-text{
+        grid-area: text;
+    }
+    .edit-status{
+        grid-area: status;
+    }
+}
+@media (max-width: 560px) {
+    .list__item{
+        width: 300px;
+
+    }
+}

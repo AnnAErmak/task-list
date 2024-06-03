@@ -1,0 +1,26 @@
+.form-filter{
+    width: 600px;
+    margin: 25px auto;
+}
+.form-filter__fields{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border: #747bff dotted 1px;
+
+}
+.form-filter__fields input{
+    height: 22px;
+}
+.form-filter__action{
+    width: 100%;
+    border: #747bff dotted 1px;
+}
+@media (max-width: 680px) {
+    .form-filter, .form-filter__fields, .form-filter__action{
+        width: 300px;
+    }
+    .form-filter__fields{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,30 @@
+.pagination__list{
+  display: flex;
+  list-style: none;
+  gap: 5px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.pagination__list__item{
+  text-align: center;
+  width: 52px;
+  height: 52px;
+  background: transparent;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color ease-out 0.3s;
+}
+.pagination__list__item:hover{
+  background-color: #747bff;
+}
+.pagination__list__item.active{
+  background-color: #747bff;
+}
+
